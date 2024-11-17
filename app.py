@@ -49,7 +49,7 @@ if uploaded_video is not None:
         stframe.image(frame, channels='RGB', use_column_width=True)
 
         # Limit frame rate
-        time.sleep(0.03)
+        #time.sleep(0.03)
 
     cap.release()
     st.success('Video processing complete!')
