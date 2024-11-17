@@ -4,10 +4,15 @@ import cv2
 import tempfile
 import numpy as np
 import os
+import pathlib
+from pathlib import Path
+
 
 # Paths
 repo_path = '.'
 model_path = 'best.pt'
+
+pathlib.PosixPath = pathlib.WindowsPath
 
 # Load the YOLOv5 model
 model = torch.hub.load(repo_path, 'custom', path=model_path, source='local')
